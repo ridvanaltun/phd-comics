@@ -1,7 +1,7 @@
 {
   "name": "phd-comics",
   "version": "1.0.0",
-  "description": "PHD Comics web scrapper.",
+  "description": "PHD Comics web scraper.",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -42,5 +42,22 @@
   "dependencies": {
     "axios": "^0.20.0",
     "cheerio": "^1.0.0-rc.3"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "./node_modules/.bin/eslint — fix --no-error-on-unmatched-pattern",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
