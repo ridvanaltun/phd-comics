@@ -1,6 +1,6 @@
 {
   "name": "phd-comics",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "PHD Comics web scrapper.",
   "main": "index.js",
   "directories": {
